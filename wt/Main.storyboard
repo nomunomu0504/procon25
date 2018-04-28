@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ksD-bL-ubd">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="mtB-9Z-26K">
+            <objects>
+                <navigationController storyboardIdentifier="StartVC" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ksD-bL-ubd" sceneMemberID="viewController">
+                    <keyCommands/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="tuc-P6-KPj">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.98379845180000003" green="1" blue="0.96768900719999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.98379845180000003" green="1" blue="0.96768900719999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.98379845180000003" green="1" blue="0.96768900719999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="1"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Kmi-w5-N1r" kind="relationship" relationship="rootViewController" id="7zj-1w-4ga"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4kQ-2s-4vz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-792" y="308"/>
+        </scene>
+        <!--ホーム-->
+        <scene sceneID="TJI-xz-3lq">
+            <objects>
+                <viewController storyboardIdentifier="MainViewVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Kmi-w5-N1r" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ccU-RB-4tE"/>
+                        <viewControllerLayoutGuide type="bottom" id="USV-2W-dX6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W9f-bs-SW1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="119" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="X7I-CH-tLF">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.96068548389999997" green="0.96068548389999997" blue="0.96068548389999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ホーム" id="4GA-f1-dkB">
+                        <barButtonItem key="leftBarButtonItem" image="addition.png" id="aKt-JQ-D2D">
+                            <connections>
+                                <segue destination="64k-vB-gif" kind="push" id="RSY-OK-Udj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="pencil.png" id="GbN-MB-OJc">
+                            <color key="tintColor" red="0.96068548389999997" green="0.96068548389999997" blue="0.96068548389999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="rw5-Ry-nLs" kind="push" id="d43-ED-1kt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="infotableview" destination="X7I-CH-tLF" id="k7D-gk-rqZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v29-op-Hxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-116" y="308"/>
+        </scene>
+        <!--認証-->
+        <scene sceneID="rKz-k9-fmc">
+            <objects>
+                <viewController storyboardIdentifier="SettingVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="64k-vB-gif" customClass="SettingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XgS-MP-71b"/>
+                        <viewControllerLayoutGuide type="bottom" id="UcM-Pg-aVG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dfv-O8-vlb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vab-Oj-jl1">
+                                <rect key="frame" x="33" y="402" width="251" height="47"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.1721270161" green="0.36567540320000003" blue="0.87405493950000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleatbutton:" destination="64k-vB-gif" eventType="touchUpInside" id="7BH-jj-5P1"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" usesAttributedText="YES" borderStyle="roundedRect" placeholder="名前" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DlZ-Vs-aLE">
+                                <rect key="frame" x="33" y="32" width="251" height="30"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="ID" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W36-jC-4fN">
+                                <rect key="frame" x="33" y="92" width="251" height="30"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWm-va-dQD">
+                                <rect key="frame" x="20" y="246" width="264" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNe-uK-oM1">
+                                <rect key="frame" x="28" y="164" width="264" height="46"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="追加する">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.98379845180000003" green="1" blue="0.96768900719999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="AddPersonsData:" destination="64k-vB-gif" eventType="touchUpInside" id="luD-s2-ZRb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="認証" id="ced-i4-ln3">
+                        <barButtonItem key="rightBarButtonItem" title="リスト" id="ZoG-Jl-mXJ">
+                            <connections>
+                                <segue destination="IYI-jH-dJN" kind="push" id="Mnm-82-DNa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="MyID" destination="aWm-va-dQD" id="yAZ-To-kS8"/>
+                        <outlet property="PersonsName" destination="DlZ-Vs-aLE" id="c3F-6f-hN3"/>
+                        <outlet property="PersonsNumber" destination="W36-jC-4fN" id="yx0-fQ-owS"/>
+                        <outlet property="addbutton" destination="gNe-uK-oM1" id="QtZ-kq-LWU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ynh-Mp-m98" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="-26"/>
+        </scene>
+        <!--Persons Table View Controller-->
+        <scene sceneID="dDo-RB-yc3">
+            <objects>
+                <tableViewController storyboardIdentifier="PersonsTableVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IYI-jH-dJN" customClass="PersonsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="Aoh-yb-RbK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="aUM-EA-mzF">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aUM-EA-mzF" id="eqe-cJ-C6c">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="IYI-jH-dJN" id="I5V-o3-rpf"/>
+                            <outlet property="delegate" destination="IYI-jH-dJN" id="crl-Fp-eWM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="2ct-kx-LaI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5LN-eK-e5A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="923" y="-26"/>
+        </scene>
+        <!--メッセージ入力-->
+        <scene sceneID="iPo-j9-Bsi">
+            <objects>
+                <viewController storyboardIdentifier="PostMessageVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rw5-Ry-nLs" customClass="PostMessageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gsf-bp-Si7"/>
+                        <viewControllerLayoutGuide type="bottom" id="u4o-3c-CtQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uiy-DG-x8U">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A5G-d0-piw">
+                                <rect key="frame" x="22" y="20" width="277" height="187"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="ここに入力してください">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="メッセージ入力" id="Owk-5q-6YA">
+                        <barButtonItem key="rightBarButtonItem" title="送信" id="IuA-vl-5OI">
+                            <connections>
+                                <action selector="SendButton:" destination="rw5-Ry-nLs" id="n2K-Fy-dKG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="NowInfoText" destination="A5G-d0-piw" id="IDi-r6-Vjb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qoT-hE-zaa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="704"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="addition.png" width="30" height="27"/>
+        <image name="pencil.png" width="27" height="27"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
